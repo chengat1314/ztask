@@ -1,0 +1,56 @@
+name:                ztask
+version:             0.1.0.0
+synopsis:            Zalora Haskeller Task
+-- description:
+-- license:
+license-file:        LICENSE
+author:              Nguyen Linh
+maintainer:          tuleism@gmail.com
+-- copyright:
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable ztask
+  main-is:             Main.hs
+  other-modules:       App,
+                       AppError,
+                       Config,
+                       Query,
+                       Controllers.Common,
+                       Controllers.Shoe,
+                       Data.Aeson.ByteString64,
+                       Models.Shoe,
+                       Views.Common,
+                       Views.ErrorPage,
+                       Views.Shoe
+  -- other-extensions:
+  build-depends:       base >=4.7 && <4.8,
+                       persistent,
+                       persistent-sqlite,
+                       persistent-template,
+                       resource-pool,
+                       mtl,
+                       scotty,
+                       bytestring,
+                       base64-bytestring,
+                       text,
+                       hflags,
+                       stm,
+                       data-default,
+                       transformers,
+                       configurator,
+                       filepath,
+                       aeson,
+                       blaze-html,
+                       blaze-markup,
+                       wai-middleware-static,
+                       path-pieces,
+                       lifted-base,
+                       http-types
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -O2 -funbox-strict-fields
+                       -Wall -rtsopts -threaded -fno-warn-unused-do-bind
+  ghc-prof-options:    -prof -auto-all

@@ -14,6 +14,7 @@ Write a FastCGI or HTTP server in Haskell that provides a restful API for managi
 * GET a list of shoes as an HTML page with hyperlinks to all available shoes.
 
 ###Installing and running
+You must have Sqlite installed.
 Clone, then build using a sandbox. Repo also contains cabal.config file that includes freeze dependencies.
 ```
 $ git clone https://github.com/tuleism/ztask

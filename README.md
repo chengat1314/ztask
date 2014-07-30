@@ -14,7 +14,7 @@ Write a FastCGI or HTTP server in Haskell that provides a restful API for managi
 * GET a list of shoes as an HTML page with hyperlinks to all available shoes.
 
 ###Installing and running
-Clone, then build using a sandbox.
+Clone, then build using a sandbox. Repo also contains cabal.config file that includes freeze dependencies.
 ```
 $ git clone https://github.com/tuleism/ztask
 $ cd ztask
@@ -60,6 +60,6 @@ $ curl -X POST -d @example.json http://localhost:3000/shoes -H "Content-Type: ap
 
 ###Implementation
 Some core libraries that powered Ztask:
-* Scotty: web framework.
-* Persistent: abstraction over backend database. Here, Ztask use Sqlite.
-* Aeson: dealing with JSON.
+* [Scotty](http://hackage.haskell.org/package/scotty): web framework.
+* [Persistent](http://hackage.haskell.org/package/persistent): abstraction over backend database. Here, Ztask use Sqlite.
+* [Aeson](http://hackage.haskell.org/package/aeson): dealing with JSON.
